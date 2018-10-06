@@ -22,10 +22,11 @@ stages{
 		    steps{
 		        timeout(time:5,unit:'Days')
 		        {
-		        input message: 'Approve production deployment'
+		        input message: 'Approve production deployment?'
 		        }
 		        build job: 'deploy-to-prod'
 		        }
+			}
 		post{
 		success{
 		echo 'Code Deployed to Production'
