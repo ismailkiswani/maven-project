@@ -3,7 +3,7 @@ pipeline {
 stages{
 		 stage('Build'){
             steps {
-              cmd.exe /c mvn clean package
+             call 'cmd.exe /c mvn clean package'
             }
             post{
                 success{
