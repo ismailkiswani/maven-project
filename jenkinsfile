@@ -6,7 +6,7 @@ pipeline {
 			//string{name: 'TOMCAT_PROD', defaultValue:'35.178.167.137',description:'Production Server'}
 	//	}
 		triggers {
-			pollSCM{'* * * * *'}
+			cron('* * * * *')
 		}
 	stages{
 		stage ('Build')
