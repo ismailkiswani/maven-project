@@ -2,8 +2,8 @@ pipeline {
     agent any
 
 		parameters {
-			string{name: 'tomcat_dev', defaultValue:'35.178.235.249',description:'Staging Server'}
-			string{name: 'tomcat_prod', defaultValue:'35.178.167.137',description:'Production Server'}
+			string{name: 'TOMCAT_DEV', defaultValue:'35.178.235.249',description:'Staging Server'}
+			string{name: 'TOMCAT_PROD', defaultValue:'35.178.167.137',description:'Production Server'}
 		}
 		triggers {
 			pollSCM{'* * * * *'}
@@ -26,12 +26,12 @@ pipeline {
 			parallel{
 				stage ('Deploy to staging'){
 					steps {
-						sh "scp -i /Documents/tomcatdemo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
+						sh "scp -i /Documents/tomcatdemo.pem **/target/*.war ec2-user@${params.TOMCAT_DEV}:/var/lib/tomcat/webapps"
 					}
 				}
 				stage ('Deploy to Production'){
 					steps {
-						sh "scp -i /Documents/tomcatdemo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat/webapps"
+						sh "scp -i /Documents/tomcatdemo.pem **/target/*.war ec2-user@${params.TOMCAT_PROD}:/var/lib/tomcat/webapps"
 					}
 				}
 
