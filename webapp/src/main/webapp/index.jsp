@@ -53,7 +53,7 @@
         <textarea name="Reference" rows="7" cols="40" style="width: 535px"></textarea>
         </td> </tr> <tr> <td colspan="2" style="text-align: center;">
        
-      <div><a href="welcome.jsp"> <input name="skip_submit" type="submit" value="Send Application"  /></a></div>
+      <div><a id="Send Application" href="welcome.jsp"> Send Application</a></div>
         </td> </tr>
         </table>
         </form>
