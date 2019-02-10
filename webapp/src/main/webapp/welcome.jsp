@@ -2,9 +2,9 @@
     <head><title>
         Thank You
     </title></head>
-    <body>
-        <h1>
+    <body bgcolor="#E6E6FA">
+        <h3>
             Thank you for Submitting your profile, We will get back to you soon.
-        </h1>
+        </h3>
     </body>
 </html>
