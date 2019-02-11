@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Welcome to DevOps Demo</title>
+    <title>Welcome to DevOps</title>
 </head>
 <body>
     <form action="//submit.form" id="EmploymentApplication100" method="post" onsubmit="return ValidateForm(this);">
