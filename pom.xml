@@ -20,6 +20,7 @@
   <modules>
     <module>server</module>
     <module>webapp</module>
+	<module>Zeft</module>
   </modules>
 
   <distributionManagement>
